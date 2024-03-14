@@ -1,0 +1,214 @@
+.image-container {
+    position: relative;
+    padding: 10px;
+}
+
+.image-container img {
+    width: 100%; /* Adjust based on your needs */
+    height: auto; /* This will maintain the aspect ratio */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.text-overlay {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white; /* Text color */
+    display: flex;
+    justify-content: left; 
+    align-items: center; /* Center the text vertically */
+    font-size: 50px; 
+    padding-left: 20px;
+}
+
+.navbar {
+    text-align: left; 
+    padding-left: 0;
+    margin-left: 0;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+.nav-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    width: 100px;
+    text-align: center;
+    padding: 5px 35px; /* Padding inside the buttons */
+    margin: 5px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Allow padding and margins */
+    transition: background-color 0.3s; /* Smooth background color change on hover */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.nav-button:hover, .nav-button:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    color: #fff; /* Ensure text color remains white */
+    text-decoration: none; /* Keep underline off on hover/focus */
+}
+
+.footer {
+    text-align: center; /* Center the text vertically */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start; /* Align horizontally in the center */
+    /* Use 'flex-start' for left alignment, 'flex-end' for right alignment */
+}
+
+.form-head {
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 50%;
+    margin: 20px;
+    display: block;
+}
+
+.add-user-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 66vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover, .login-button:focus {
+    background-color: #003d82;
+}
+
+.add-user-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.add-user-button:hover, .add-user-button:focus {
+    background-color: #003d82;
+}
+
+.edit-user-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.edit-user-button:hover, .edit-user-button:focus {
+    background-color: #003d82;
+}
+
+
+.login-feedback{
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: left; 
+    font-size: 15px; 
+    width: 100%;
+}
+
+/* Base table styles */
+table {
+    border-collapse: collapse; /* Removes the space between table borders */
+    width: 100%; /* Full-width tables for better responsiveness */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures the border-radius applies by clipping the content */
+    background-color: #ffffff; /* White background for the table */
+    margin: 20px 0; /* Adds some space around the table */
+}
+
+/* Table headers */
+th {
+    background-color: #007bff; /* A nice shade of blue for header background */
+    color: #ffffff; /* White text color for contrast */
+    text-align: left; /* Aligns header text to the left */
+    padding: 12px 15px; /* Spacing inside header cells */
+    font-size: 16px; /* Slightly larger text for headers */
+}
+
+/* Table rows and cells */
+td {
+    padding: 10px 15px; /* Spacing inside cells */
+    border-bottom: 1px solid #dddddd; /* Light grey border for separating rows */
+    font-size: 14px; /* Standard font size for table content */
+}
+
+/* Styling for row hover state */
+tr:hover {
+    background-color: #f5f5f5; /* Light grey background on row hover for better readability */
+}
+
+/* Last row border removal */
+tr:last-child td {
+    border-bottom: none; /* Removes bottom border from the last row */
+}
+
+.db_connected_failure {
+    color: red; 
+}
+
+.db_connected_successful {
+    color: green; 
+}
