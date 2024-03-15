@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <body>
     <?php include 'includes/header.php'; ?>
     
@@ -6,7 +5,7 @@
         <?php include 'includes/navbar/manage_users_navbar.php'; ?>
         <div>
             <?php 
-                
+                session_start();
                 $username = $_SESSION['username'];
                 $login_feedback = "Your are currently logged in as: ". $username;
                 echo "<p class='login-feedback'>$login_feedback</p>";

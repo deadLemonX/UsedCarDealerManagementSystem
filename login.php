@@ -42,7 +42,7 @@
                             echo " sub pass " . $submittedPass;
                             
                             if (password_verify($submittedPass, $password)) {
-                                $_SESSION["loggedin"] = true;
+                                $_SESSION["logged_in"] = true;
                                 $_SESSION["user_id"] = $user_id;
                                 $_SESSION["username"] = $username; 
                                 $_SESSION["is_admin"] = $is_admin;                           
