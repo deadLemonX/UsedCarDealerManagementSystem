@@ -1,52 +1,69 @@
-<?php
-    session_start();
+<body>
 
-    // Example security check: make sure the user is logged in
-    // and has the right to delete users. Adjust according to your application's logic.
-    if (!isset($_SESSION['logged_in']) || $_SESSION['is_admin'] !== 1) {
-        echo "You do not have permission to perform this action.";
-        exit;
-    }
+    <?php include 'includes/header.php'; ?>
+    
+    <div class="flex-container">
+        <div>
+            <?php include 'includes/navbar/manage_users_navbar.php'; ?>
+        </div>
+        <div>
+            <?php 
+                session_start();
+                $username = $_SESSION['username'];
+                $login_feedback = "Your are currently logged in as: ". $username;
+                echo "<p class='login-feedback'>$login_feedback</p>";
+            ?>
+            <?php if (isset($_GET['user_id'])) 
+                {
+                    $first_name = '';
+                    $user_id = '';
+                    if (isset($_GET['user_id'])) {
+                        $_SESSION['currentDeleteUserPKey'] = $_GET['user_id'];
+                        $name = $_GET['name'];;
+                        $user_id = $_SESSION['currentDeleteUserPKey'];
+                    }
+                }  
+            ?>
+            
+            <form action="" method="POST" class="delete-user-form">
+                <h2 class="form-head">Delete User</h2>
+                <?php echo "<p class='form-head'><b>Are you sure you want to delete $name?</b></p>"; ?>
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+                <input type="submit" name="confirm_delete_user" value="Yes" class="delete-user-button">
+                <input type="submit" name="confirm_delete_user" value="No" class="delete-user-button">
+            </form>
+            <?php
+                //session_start();
+                if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
+                    // Check if user confirmed the deletion
+                    if ($_POST['confirm_delete_user'] == 'Yes' && isset($_SESSION['currentDeleteUserPKey'])) {
+                        $user_id = $_SESSION['currentDeleteUserPKey'];
+                        require 'db_connect.php'; 
 
-    // Check if a user_id is provided
-    if (isset($_GET['user_id'])) {
-        $user_id = $_GET['user_id'];
+                        $stmt = $conn->prepare("DELETE FROM users WHERE user_id = ?");
+                        $stmt->bind_param("i", $user_id);
 
-        // Include your DB connection script
-        require 'db_connect.php';
+                        if ($stmt->execute()) {
+                            echo "User deleted successfully.";
+                            header("Location: manage_users.php");
+                            
+                        } else {
+                            echo "Error deleting user: " . htmlspecialchars($conn->error);
+                        }
 
-        // Validate and sanitize the user_id
-        $user_id = filter_var($user_id, FILTER_SANITIZE_NUMBER_INT);
+                        $stmt->close();
+                        $conn->close();
+                    } else if($_POST['confirm_delete_user'] == 'No') {
+                        header("Location: manage_users.php");
+                    } else {
+                        exit;
+                    }
+                }
+            ?>
+        </div>
+    </div>
+    <?php include 'includes/footer.php'; ?>
 
-        // Prepare the SQL statement
-        $stmt = $conn->prepare("DELETE FROM users WHERE user_id = ?");
+   
 
-        if (false === $stmt) {
-            // Handle error in statement preparation
-            echo "Error preparing statement: " . htmlspecialchars($conn->error);
-            exit;
-        }
 
-        // Bind parameters and execute
-        $stmt->bind_param("i", $user_id);
-
-        if ($stmt->execute()) {
-            echo "User deleted successfully.";
-
-            // Optionally, redirect to another page after successful deletion
-            header('Location: manage_users.php');
-            exit;
-        } else {
-            // Handle error in statement execution
-            echo "Error executing statement: " . htmlspecialchars($stmt->error);
-        }
-
-        // Close statement and connection
-        $stmt->close();
-        $conn->close();
-    } else {
-        echo "No user selected for deletion.";
-        // Redirect or display an error message
-    }
-
-?>

@@ -46,7 +46,7 @@
                 <?php foreach ($results as $row): ?>
                     <tr>
                         <td><a href="edit_user.php?user_id=<?php echo $row['user_id']; ?>">Edit</a></td>
-                        <td><a href="delete_user.php?user_id=<?php echo $row['user_id']; ?>">Delete</a></td>
+                        <td><a href="delete_user.php?user_id=<?php echo $row['user_id'];?>&name= <?php echo $row['first_name'] . " " . $row['last_name']; ?>">Delete</a></td>
                         <td><?php echo $row['first_name'] . " " . $row['last_name']; ?></td>
                         <td><?php echo $row['user_name']; ?></td>
                         <td><?php echo $row['email']; ?></td>

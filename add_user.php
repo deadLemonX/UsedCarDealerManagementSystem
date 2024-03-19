@@ -50,10 +50,11 @@
                              
                     if ($stmt->execute()) {
                         echo "New user created successfully.";
+                        header("Location: manage_users.php");
                     } else {
                         echo "Error executing statement: " . $stmt->error;
                     }
-                    echo '7';
+                    
                     $stmt->close();
                    
                 }
