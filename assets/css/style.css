@@ -192,6 +192,73 @@ input[type="password"] {
     background-color: #003d82;
 }
 
+.add-make-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+}
+
+.add-make-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.add-make-button:hover, .add-make-button:focus {
+    background-color: #003d82;
+}
+
+.delete-make-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+}
+
+.delete-make-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.delete-make-button:hover, .delete-make-button:focus {
+    background-color: #003d82;
+}
+
 .login-feedback{
     font-family: 'Times New Roman', Times, serif;
     color: purple;

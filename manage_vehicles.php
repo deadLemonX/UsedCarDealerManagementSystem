@@ -12,7 +12,11 @@
                 $login_feedback = "Your are currently logged in as: ". $username;
                 echo "<p class='login-feedback'>$login_feedback</p>";
             ?>
-            
+            <?php
+                echo '<main class="image-container">
+                <img src="assets/images/car_logos.png" alt="Car Logos">
+                </main>';
+            ?>
         </div>
     </div>
 
