@@ -56,11 +56,11 @@
                     }
                 ?>
 
-                <label for="purchased_date">Purchased Date</label><input type="date" name="purchased_date" required><br>
-                <label for="purchased_price">Purchased Price</label><input type="text" name="purchased_price" required><br>
-                <label for="sold_date">Sold Date</label><input type="date" name="sold_date" required><br>
-                <label for="sold_price">Sold Price</label><input type="text" name="sold_price" required><br>
-                <label for="additional_cost">Additional Cost</label><input type="text" name="additional_cost" required><br>
+                <label for="purchased_date">Purchased Date: </label><br><input type="date" name="purchased_date" class="date_input" required><br><br>
+                <label for="purchased_price">Purchased Price: </label><input type="text" name="purchased_price" required><br>
+                <label for="sold_date">Sold Date: </label><br><input type="date" name="sold_date" class="date_input" required><br><br>
+                <label for="sold_price">Sold Price: </label><input type="text" name="sold_price" required><br>
+                <label for="additional_cost">Additional Cost: </label><input type="text" name="additional_cost" required><br>
                 <button type="submit" class="add-vehicle-inventory-button">Add</button>
             </form>
 

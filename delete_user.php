@@ -19,7 +19,7 @@
                     $user_id = '';
                     if (isset($_GET['user_id'])) {
                         $_SESSION['currentDeleteUserPKey'] = $_GET['user_id'];
-                        $name = $_GET['name'];;
+                        $name = $_GET['name'];
                         $user_id = $_SESSION['currentDeleteUserPKey'];
                     }
                 }  

@@ -68,7 +68,7 @@
                 <?php foreach ($results as $row): ?>
                     <tr>
                         <td><a href="edit_user.php?vehicle_id=<?php echo $row['vehicle_id']; ?>">Edit</a></td>
-                        <td><a href="delete_user.php?vehicle_id=<?php echo $row['vehicle_id'];?>&make= <?php echo $row['make']; ?>&model= <?php echo $row['model']; ?>&year= <?php echo $row['year']; ?>&vin= <?php echo $row['vin']; ?>">Delete</a></td>
+                        <td><a href="delete_vehicle_inventory.php?vehicle_id=<?php echo $row['vehicle_id'];?>">Delete</a></td>
                         <td><?php echo $row['make'] . " " . $row['last_name']; ?></td>
                         <td><?php echo $row['model']; ?></td>
                         <td><?php echo $row['color']; ?></td>
