@@ -13,7 +13,7 @@
             
             <form method="POST" action="" class="add-make-form">
                 <h2 class="form-head">Add Make</h2><br>
-                <label for="user_name">Make:</label><input type="text" id="name" name="name" required><br>
+                <label for="name">Vehicle Make:</label><input type="text" id="name" name="name" required><br>
                 <button type="submit" class="add-make-button">Add</button>
             </form>
 

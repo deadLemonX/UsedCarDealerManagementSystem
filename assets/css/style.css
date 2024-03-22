@@ -259,6 +259,143 @@ input[type="password"] {
     background-color: #003d82;
 }
 
+.edit-make-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+}
+
+.edit-make-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+.edit-make-button:hover, .edit-make-button:focus {
+    background-color: #003d82;
+}
+
+.add-model-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+    
+}
+
+.add-model-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 0px;
+}
+
+.add-model-button:hover, .add-model-button:focus {
+    background-color: #003d82;
+}
+
+.edit-model-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    margin: 15px;
+    display: block;
+}
+
+.edit-model-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 0px;
+}
+
+.edit-model-button:hover, .edit-model-button:focus {
+    background-color: #003d82;
+}
+
+.filter-makes-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 90%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.filter-makes-button {
+    width: 25%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 0px;
+}
+
+.filter-makes-button:hover, .filter-makes-button:focus {
+    background-color: #003d82;
+}
+
 .login-feedback{
     font-family: 'Times New Roman', Times, serif;
     color: purple;
@@ -269,6 +406,7 @@ input[type="password"] {
     font-size: 15px; 
     width: 100%;
 }
+
 
 /* Base table styles */
 table {
@@ -306,6 +444,13 @@ tr:hover {
 tr:last-child td {
     border-bottom: none; /* Removes bottom border from the last row */
 }
+
+select {
+    width: 93%; /* or any specific width */
+    height: 50px; /* or any specific height */
+    font-size: 20px; /* Adjusts the text size, which can also affect the perceived size of the box */
+}
+
 
 .db_connected_failure {
     color: red; 
